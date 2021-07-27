@@ -1,9 +1,18 @@
 {
-    "name": "reactjs-tooltip",
-    "version": "1.0.0",
+    "name": "rjs-tooltip",
+    "version": "1.0.1",
     "main": "lib/index.js",
     "author": "aditya <adityakmr9672@gmail.com> (http://adityakmr.in/)",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/adityakmr7/reactjs-tooltip"
+    },
+    "keywords": [
+        "tooltip",
+        "reactjs-tooltip",
+        "rj-tooltip"
+    ],
     "scripts": {
         "build": "babel src --out-dir lib --ignore __tests__",
         "lint": "eslint .",
