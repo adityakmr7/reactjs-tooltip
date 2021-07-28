@@ -1,51 +1,81 @@
 {
-    "name": "rjs-tooltip",
-    "version": "1.0.2",
-    "main": "lib/index.js",
-    "author": "aditya <adityakmr9672@gmail.com> (http://adityakmr.in/)",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/adityakmr7/reactjs-tooltip"
-    },
-    "keywords": [
-        "tooltip",
-        "reactjs-tooltip",
-        "rj-tooltip"
-    ],
-    "scripts": {
-        "build": "babel src --out-dir lib --ignore __tests__",
-        "lint": "eslint .",
-        "docz:dev": "docz dev",
-        "docz:build": "docz build",
-        "docz:serve": "docz build && docz serve"
-    },
-    "peerDependencies": {
-        "react": ">= 16.2.0",
-        "react-dom": ">= 16.2.0"
-    },
-    "devDependencies": {
-        "@babel/cli": "7.14.5",
-        "@babel/core": "7.14.6",
-        "@babel/preset-env": "7.14.7",
-        "@babel/preset-react": "7.14.5",
-        "babel-eslint": "10.1.0",
-        "babel-jest": "27.0.6",
-        "docz": "2.3.1",
-        "eslint": "7.31.0",
-        "eslint-config-airbnb": "18.2.1",
-        "eslint-config-prettier": "8.3.0",
-        "eslint-plugin-import": "2.23.4",
-        "eslint-plugin-jest": "24.4.0",
-        "eslint-plugin-jsx-a11y": "6.4.1",
-        "eslint-plugin-prettier": "3.4.0",
-        "eslint-plugin-react": "7.24.0",
-        "jest": "27.0.6",
-        "prettier": "2.3.2",
-        "react": "17.0.2",
-        "react-dom": "17.0.2"
-    },
-    "dependencies": {
-        "core-js": "3"
+  "version": "1.0.3",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "keywords": [
+    "tooltip",
+    "reactjs-tooltip",
+    "rj-tooltip"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
     }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityakmr7/reactjs-tooltip"
+  },
+  "name": "rjs-tooltip",
+  "author": "aditya <adityakmr9672@gmail.com> (http://adityakmr.in/)",
+  "module": "dist/rjs-tooltip.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/rjs-tooltip.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/rjs-tooltip.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "7.14.8",
+    "@size-limit/preset-small-lib": "5.0.2",
+    "@storybook/addon-essentials": "6.3.6",
+    "@storybook/addon-info": "5.3.21",
+    "@storybook/addon-links": "6.3.6",
+    "@storybook/addons": "6.3.6",
+    "@storybook/react": "6.3.6",
+    "@testing-library/react": "12.0.0",
+    "@types/react": "17.0.15",
+    "@types/react-dom": "17.0.9",
+    "babel-loader": "8.2.2",
+    "husky": "7.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-is": "17.0.2",
+    "size-limit": "5.0.2",
+    "tsdx": "0.14.1",
+    "tslib": "2.3.0",
+    "typescript": "4.3.5"
+  }
 }
